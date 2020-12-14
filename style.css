@@ -1,3 +1,54 @@
+/* Animaties */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 5s;
+}
+
+@keyframes slide {
+    0% {
+        left: -1000px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes veranderKleur {
+    0% {
+        color: red;
+    }
+    25% {
+        color: yellow;
+    }
+    50% {
+        color: green;
+    }
+    75% {
+        color: blue;
+    }
+    100% {
+        color: purple;
+    }
+}
+
+.veranderKleur {
+    animation: veranderKleur 15s infinite;
+}
+
+.slide {
+    position: relative;
+    animation: slide 5s;
+}
+
 /* Basislayout */
 
 html, body {
@@ -25,6 +76,8 @@ article {
 header {
     color: rgb(128, 99, 255);
     text-align: center;
+    border-bottom: 3px solid black;
+    margin-bottom: 10px;
 }
 
 
@@ -36,10 +89,19 @@ footer {
 
 
 /* specifieke stijlen */
+img {
+    width: 200px;
+    height: 150px;
+}
 
 .zweefLinks {
     float: left;
     margin-right: 15px;
+}
+
+.zweefRechts {
+    float: right;
+    margin-left: 15px;
 }
 
 .midden {
@@ -50,7 +112,7 @@ footer {
 }
 
 #bovenste {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .smalltext {
@@ -78,7 +140,11 @@ nav ul {
 
 nav ul li {
     float: left;
-    width: 140px;
+    width: 19.9%;
+}
+
+li+li {
+    border-left: 0.5px dashed black;
 }
 
 nav li a {
