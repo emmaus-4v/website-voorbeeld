@@ -1,11 +1,61 @@
+/* Animaties */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 5s;
+}
+
+@keyframes slide {
+    0% {
+        left: -1000px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes veranderKleur {
+    0% {
+        color: red;
+    }
+    25% {
+        color: yellow;
+    }
+    50% {
+        color: green;
+    }
+    75% {
+        color: blue;
+    }
+    100% {
+        color: purple;
+    }
+}
+
+.veranderKleur {
+    animation: veranderKleur 15s infinite;
+}
+
+.slide {
+    position: relative;
+    animation: slide 5s;
+}
+
 /* Basislayout */
 
 html, body {
     height: 100%;
     padding: 0;
-    background-color: #EEEEEE;  
-    
-    color: #303030;
+    background-color: #f3f3f3;  
+    color: #707070;
     font: Verdana, Arial, Sans-Serif;
 }
 
@@ -19,26 +69,50 @@ main {
 
 article {
     text-align: justify;
+    clear: both;
 }
 
 
 header {
-    color: skyblue;
+    color: rgb(128, 99, 255);
     text-align: center;
+    border-bottom: 3px solid black;
+    margin-bottom: 10px;
 }
 
 
 footer {
     text-align: center;
     padding-bottom: 10px;
+    clear: both;
 }
 
 
 /* specifieke stijlen */
+img {
+    width: 200px;
+    height: 150px;
+}
 
-img.zweefLinks {
+.zweefLinks {
     float: left;
     margin-right: 15px;
+}
+
+.zweefRechts {
+    float: right;
+    margin-left: 15px;
+}
+
+.midden {
+    width: 300px;
+    height: 200px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+#bovenste {
+    margin-top: 30px;
 }
 
 .smalltext {
@@ -46,7 +120,7 @@ img.zweefLinks {
 }
 
 a {
-    color: skyblue;
+    color: rgb(128, 99, 255);
     text-decoration: none;
 }
 
@@ -60,12 +134,17 @@ nav ul {
     list-style-type: none;
     margin: auto;
     padding: 0;
-    background-color: #dddddd;
+    background-color: rgb(172, 154, 255);
     overflow: hidden;
 }
 
 nav ul li {
     float: left;
+    width: 19.9%;
+}
+
+li+li {
+    border-left: 0.5px dashed black;
 }
 
 nav li a {
@@ -77,11 +156,11 @@ nav li a {
 }
 
 nav li a:hover {
-    background-color: #aaaaaa;
+    background-color: rgb(111, 0, 255);
 }
 
 nav li a.active {
-    background-color: skyblue;
+    background-color: rgb(128, 99, 255);
 }
 
 
