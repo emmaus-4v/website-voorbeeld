@@ -15,11 +15,16 @@
 
 @keyframes slide {
     0% {
-        left: -1000px;
+        left: -200px;
     }
     100% {
         left: 0px;
     }
+}
+
+.slide {
+    position: relative;
+    animation: slide 5s;
 }
 
 @keyframes veranderKleur {
@@ -42,11 +47,6 @@
 
 .veranderKleur {
     animation: veranderKleur 15s infinite;
-}
-
-.slide {
-    position: relative;
-    animation: slide 5s;
 }
 
 /* Basislayout */
